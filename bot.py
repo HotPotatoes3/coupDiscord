@@ -16,18 +16,6 @@ async def send_message(message, user_message, is_private):
 intents = discord.Intents.default()
 intents.message_content = True
 
-# #Instance 1
-# gaming = False
-# playerList = []
-# playerList2 = []
-# startcount = 0
-# forcestart = 0
-# turn = 0
-# deck = ['🥷', '🤵‍♂️', '💃', '🧑‍✈️', '🦹‍♂️', '🥷', '🤵‍♂️', '💃', '🧑‍✈️', '🦹‍♂️', '🥷', '🤵‍♂️', '💃', '🧑‍✈️', '🦹‍♂️']
-# vote = 0
-# challengeWon = False
-# temparr = []
-
 
 servers = [None]
 
