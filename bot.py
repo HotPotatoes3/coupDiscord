@@ -3,6 +3,7 @@ import os
 import discord
 import numpy as np
 import responses
+from dotenv import load_dotenv
 
 
 async def send_message(message, user_message, is_private):
@@ -39,7 +40,12 @@ class coupGame:
 
 
 def run_discord_bot():
-    TOKEN = os.environ['TOKEN']
+    
+    load_dotenv()
+    TOKEN = os.getenv('BOT_KEY')
+    
+    
+    
     client = discord.Client(intents=intents)
 
     @client.event
@@ -735,6 +741,8 @@ async def challenge(user1, user2, char, message, server):
             user1.health -= 2
         else:
             user1.health -= 1
+        
+        user1.potmoney = 0
 
         user1.potdeath = False
         user2.potdeath = False
